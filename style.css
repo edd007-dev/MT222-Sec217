@@ -1,0 +1,104 @@
+/*// BASE STYLES //*/
+    *{
+        margin: 0;
+        padding: 0;
+    }
+  
+  .sky{
+    height: 282px;
+    background: skyblue;
+  }
+  
+  .grass{
+    height: 210px;
+    background: seagreen;
+  }
+  
+  .road{
+    height: 10px;
+    background: dimgrey;
+    height: 192px;
+    border-top: 10px solid grey;
+    border-bottom: 10px solid grey;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .lines{
+    border: 5px dashed #fff;  
+    width: 100%;  
+  }
+
+  
+  
+  
+  
+  /*// ELEMENTS TO ANIMATE //*/
+  
+  .mario{
+    position: absolute;
+    top: -50px;
+    left: 0;
+    /* animation: drive 3s; */
+    /* animation-fill-mode: forwards; */
+/*     animation-fill-mode: backwards; */
+    /* animation: drive 3s infinite linear;
+    animation-fill-mode: both;
+    animation-delay: 2s; */
+    animation: drive 3s both infinite linear,
+                jump 0.3s 1.2s ease;
+  }
+  
+  /*// KEYFRAMES //*/
+  @keyframes drive{
+    from{
+        /* transform: translateX(0); */
+        /* transform: translateX(200px); */
+        transform: translateX(-200px);
+    }
+
+    to{
+        /* transform: translateX(1415px); */
+        transform: translateX(1530px);
+    }
+  }
+
+  .luigi{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    /* animation: drive 3s; */
+    /* animation-fill-mode: forwards; */
+/*     animation-fill-mode: backwards; */
+    /* animation: drive 5s infinite linear; */
+    /* animation: drive 5s infinite ease-in; */
+    animation: drive 5s infinite ease-out;
+
+    animation-fill-mode: both;
+    animation-delay: 2s;
+    /* animation-direction: reverse; */
+    /* animation-direction: alternate; */
+    animation-direction: alternate-reverse;
+  }
+
+  @keyframes jump{
+    0%{
+        top: -50px;
+    }
+
+    50%{
+        top: -100px;
+    }
+
+    100%{
+        top: -50px;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
